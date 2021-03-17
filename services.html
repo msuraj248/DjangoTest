@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Services {% endblock title %}
+
+{% block body %}
+<div class="container my-4 px-10">
+    <img src="https://source.unsplash.com/700x200/?vanilla cream" class="d-block w-100 h-50">
+    <br>
+    <p class="card-text">Your Ice-cream will be ready to serve.</p>
+    <p>Enter your Details:</p>
+</div>>
+<div class="container my-4">
+    <form action="/index" method="POST" >
+        {% csrf_token %}
+        <div class="container my-3">
+            <label for="name">Enter Name:</label>
+            <input type="text" class="col-sm-4" id="name" name="name" placeholder="Enter ur name">
+        </div>
+        <div class="container my-3">
+            <label for="mail">Enter Email:</label>
+            <input type="email" class="col-sm-4" id="mail" name="mail" placeholder="Enter ur email">
+        </div>
+        <div class="container my-3">
+            <label for="contact">Enter Ph:</label>
+            <input type="text" class="col-sm-4" id="contact" name="contact" placeholder="Enter mobile number">
+        </div>
+        <div class="container my-3">
+            <label for="address">Enter Address:</label>
+            <input type="text" class="col-sm-4" id="address" name="address">
+        </div>
+        <div class="container">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}
+
